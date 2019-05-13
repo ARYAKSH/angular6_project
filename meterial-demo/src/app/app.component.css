@@ -1,0 +1,15 @@
+
+.container{
+    text-align: center;
+    /*border: 1px solid gray;*/
+}
+
+.autoComplete{
+    background: rgba(0, 206, 201,1.0);
+}
+
+.footer{
+    background: rgba(0, 206, 201,1.0);
+    height:20px;
+    margin:20px 0px 0px 0px;
+}

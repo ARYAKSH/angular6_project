@@ -1,0 +1,26 @@
+
+<form>
+    <mat-form-field>
+      User Name <input  type="text"  [(ngModel)]="userName" matInput [ngModelOptions]="{standalone: true}"/>
+    </mat-form-field>
+    <button mat-raised-button (click)="search()">Search</button>
+  </form>
+
+
+<div *ngIf="response;then content else other_content">here is ignored</div>    
+<ng-template #content>
+  <div  class="details">
+    <p>Login : {{response.login}}</p>
+    <p>Login ID : {{response.id}}</p>
+    <p>Public Repose : {{response.public_repose}}</p>
+    <p>Public Gists : {{response.public_gists}}</p>
+    <p>Followers : {{response.followers}}</p>
+    <p>Created at : {{response.created_at}}</p>
+  </div>
+</ng-template>
+<ng-template #other_content>
+  <div class="details">
+    <p>Data will be shown here!!</p>
+    </div>
+</ng-template>
+<button mat-raised-button (click)="onCreate()">PopUp</button>

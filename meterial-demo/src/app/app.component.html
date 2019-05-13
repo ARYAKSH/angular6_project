@@ -1,0 +1,19 @@
+<div class="title">
+  
+</div>
+  <div class="container">
+    <div class ="autoComplete">
+      <form>
+      <mat-form-field>
+        Search <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl"/>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredOption | async" [value]="option">
+              {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+  <app-sever-request></app-sever-request>
+</div>
+<div class="footer"></div>
